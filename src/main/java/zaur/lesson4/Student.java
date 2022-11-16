@@ -10,6 +10,16 @@ public class Student {
     double averageRatingEconomics;
     double averageRatingForeignLanguage;
 
+    // метод вывода на экран
+    void showInfo() {
+        System.out.printf("Средний балл " + firstName + " " + lastName + " = " + "%.2f",arithmeticMean());
+        System.out.println();
+    }
+
+    //метод для вычисления среднего арифметического
+    double arithmeticMean() {
+        return (averageRatingMath + averageRatingEconomics + averageRatingForeignLanguage) / 3;
+    }
 }
 
 class StudentTest {
@@ -39,12 +49,18 @@ class StudentTest {
         student3.averageRatingEconomics = 4.53;
         student3.averageRatingForeignLanguage = 5.0;
 
+        student1.showInfo();
+        student2.showInfo();
+        student3.showInfo();
+
+
+        System.out.println("-----------");
 //System.out.printf("%.3f",value);
-        System.out.printf("Средний балл " + student1.firstName + " " + student1.lastName + " = " + "%.2f",(student1.averageRatingMath + student1.averageRatingEconomics + student1.averageRatingForeignLanguage) / 3);
+        System.out.printf("Средний балл " + student1.firstName + " " + student1.lastName + " = " + "%.2f", (student1.averageRatingMath + student1.averageRatingEconomics + student1.averageRatingForeignLanguage) / 3);
         System.out.println();
-        System.out.printf("Средний балл " + student2.firstName + " " + student2.lastName + " = " + "%.2f",(student2.averageRatingMath + student2.averageRatingEconomics + student2.averageRatingForeignLanguage) / 3);
+        System.out.printf("Средний балл " + student2.firstName + " " + student2.lastName + " = " + "%.2f", (student2.averageRatingMath + student2.averageRatingEconomics + student2.averageRatingForeignLanguage) / 3);
         System.out.println();
-        System.out.printf("Средний балл " + student3.firstName + " " + student3.lastName + " = " + "%.2f",(student3.averageRatingMath + student3.averageRatingEconomics + student3.averageRatingForeignLanguage) / 3);
+        System.out.printf("Средний балл " + student3.firstName + " " + student3.lastName + " = " + "%.2f", (student3.averageRatingMath + student3.averageRatingEconomics + student3.averageRatingForeignLanguage) / 3);
 
     }
 
