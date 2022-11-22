@@ -9,15 +9,13 @@ public class BankAccount {
     double balance;
 
     // метод для пополнения счёта
-    double popolnenieShceta(double PlusAmount) {
-        balance = balance + PlusAmount;
-        return balance;
+    void popolnenieShceta(double PlusAmount) {
+        balance += PlusAmount;
     }
 
     // метод для снятия со счёта
-    double snyatieSoScheta(double MinusAmount) {
-        balance = balance - MinusAmount;
-        return balance;
+    void snyatieSoScheta(double MinusAmount) {
+        balance -= MinusAmount;
     }
 
     // метод для вывода на печать информации о счёте
