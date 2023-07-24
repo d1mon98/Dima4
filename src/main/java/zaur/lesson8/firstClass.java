@@ -2,16 +2,16 @@ package zaur.lesson8;
 
 public class firstClass {
 
-    static double Pi = 3.14;
+    final static double PI = 3.14;
 
     double circleArea(double r) {
         System.out.print("Площадь круга с радиусом " + r + " = ");
-        return Pi * r * r;
+        return PI * r * r;
     }
 
     static double circumference(double r) {
         System.out.print("Длина оккружности с радиусом " + r + " = ");
-        return 2 * Pi * r;
+        return 2 * PI * r;
     }
 
     static int multipication(int a, int b, int c) {
@@ -37,11 +37,14 @@ class firstClassTest {
         System.out.println(firstClass.multipication(15, 4, 3));
         firstClass.division(10, 31);
 
+        System.out.println();
         firstClass test1 = new firstClass();
         System.out.println(test1.circleArea(4));
 
+        System.out.println();
         System.out.println(firstClass.circumference(7));
 
+        System.out.println();
         test1.combo(5);
 
     }
